@@ -48,6 +48,8 @@ process runArriba{
 	-x /dev/stdin \
 	-o B16F10.ARRIBA.fusions.tsv -O B16F10.ARRIBA.fusions.discarded.tsv \
 	-a /efs/Mouse_gencode_M20_CTAT_lib_Oct012019.plug-n-play/ctat_genome_lib_build_dir/ref_genome.fa -g /efs/Mouse_gencode_M20_CTAT_lib_Oct012019.plug-n-play/ctat_genome_lib_build_dir/ref_annot.gtf  \
-	-T -P > B16F10.arriba.log 2>B16F10.arriba.err
+	-b blacklist.tsv \
+	-T -P -i 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, X, Y \
+	> B16F10.arriba.log 2>B16F10.arriba.err
 	"""
 }
